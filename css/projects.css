@@ -1,0 +1,60 @@
+/* styling project card list */
+#project-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  max-width: 120rem;
+  align-self: center;
+  align-items: flex-start;
+}
+
+/* combined component: project card */
+#project-list section {
+  /* max-width: 40rem; */
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  transition: 0.8s;
+}
+
+/* set shape for card cover */
+#project-list section img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+/* add drop shadow effect when hovering project card */
+#project-list section:hover {
+  box-shadow: 8.6px 7.1px 19px -11px rgba(0, 0, 0, 0.065),
+    36px 30px 45px -11px rgba(0, 0, 0, 0.13);
+}
+
+/* set left right padding for card excluding cover and button */
+#project-list section *:not(img, .button) {
+  padding: 0 1rem;
+}
+
+/* *** TABLET STYLES *** */
+@media only screen and (min-width: 680px) {
+  /* cards display in 2 rows */
+  #project-list {
+    /* column-gap: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+/* *** DESKTOP STYLES *** */
+@media only screen and (min-width: 970px) {
+  /* cards display in 3 rows or more */
+  #project-list {
+    /* flex: 33.3%; */
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

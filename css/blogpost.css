@@ -1,0 +1,152 @@
+/* blog post banner */
+
+/* article layout */
+.blog-post-main article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* remove space around banner image */
+.blog-post-main {
+  margin-top: 0;
+}
+
+/* set title size */
+.blog-post-main h1 {
+  font-size: 2rem;
+  max-width: 60rem;
+}
+
+/* combined comp: title banner */
+
+section[id^="blog-heading-"] {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 2.5rem;
+  width: 100vw;
+}
+
+section[id^="blog-heading-"] * {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.1rem;
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+
+/* banner background image */
+#blog-heading-1 {
+  background: #00000070
+    url("../assets/blog-img/responsive-0-visual-design-pl9DrjAMV6I-unsplash.jpg")
+    center no-repeat;
+  background-size: cover;
+}
+
+#blog-heading-2 {
+  background: #00000070
+    url("../assets/blog-img/api-0-douglas-lopes-ehyV_XOZ4iA-unsplash.jpg")
+    center no-repeat;
+  background-size: cover;
+}
+
+#blog-heading-3 {
+  background: #00000070
+    url("../assets/blog-img/terminal-0-nils-huenerfuerst-E-IQ1nbpzZo-unsplash.jpg")
+    center no-repeat;
+  background-size: cover;
+}
+
+#blog-heading-4 {
+  background: #00000070
+    url("../assets/blog-img/slider-0-marvin-meyer-HN1roKF-DS4-unsplash.jpg")
+    center no-repeat;
+  background-size: cover;
+}
+
+#blog-heading-5 {
+  background: #00000070
+    url("../assets/blog-img/portfolio-0-ux-store-jJT2r2n7lYA-unsplash.jpg")
+    center no-repeat;
+  background-size: cover;
+}
+
+/* blog navbar - prev next back */
+.blog-nav {
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  bottom: 0;
+  background-color: #eff1f5;
+  margin-top: 1rem;
+}
+
+.blog-nav a {
+  background: #0980a7;
+  color: white;
+  text-decoration: none;
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.blog-content {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  max-width: 50rem;
+  width: 100%;
+}
+
+/* left align body text */
+.blog-post-main > p {
+  align-self: flex-start;
+}
+
+/* image same as content width */
+.blog-post-main img {
+  width: 100%;
+}
+
+/* graphic comp: article image  */
+figcaption {
+  /* set caption style */
+  color: grey;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+figcaption a {
+  color: inherit;
+}
+
+/* *** TABLET AND DESKTOP STYLES *** */
+@media only screen and (min-width: 680px) {
+  /* increase spacing for title banner */
+  section[id^="blog-heading-"] > * {
+    margin: 2rem 0;
+  }
+
+  /* make blog navbar appear closer to each other */
+  .blog-nav {
+    justify-content: center;
+  }
+
+  .blog-nav a {
+    margin: 0 2rem;
+  }
+
+  figure {
+    width: 80%;
+    align-self: center;
+  }
+}
+
+.inline-code {
+  background-color: #f4f4f4;
+  display: inline;
+  padding: 0 0.2rem;
+  border-radius: 0.2rem;
+  color: crimson;
+}

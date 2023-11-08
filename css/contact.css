@@ -1,0 +1,96 @@
+/* combined comp: social accounts list */
+.social-list-full {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-list-full a {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  text-decoration: none;
+  color: #141414;
+}
+
+.social-list-full a:hover .logo-fill {
+  display: inline-block;
+}
+
+.social-list-full a:hover .logo-line {
+  display: none;
+}
+
+/* text comp: contact form */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 0.5rem;
+  max-width: 55rem;
+  width: 100%;
+}
+/* submit button */
+form .button {
+  border: none;
+  align-self: center;
+}
+
+/* required * */
+form em {
+  color: red;
+  font-style: normal;
+}
+
+textarea {
+  resize: none;
+  padding: 0.5rem;
+}
+
+input {
+  padding: 0.3rem;
+}
+
+/* *** TABLET STYLES *** */
+@media only screen and (min-width: 680px) {
+  /* form labels appear to the left of the field */
+  form {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    row-gap: 1rem;
+  }
+  /* make submit button appear center last line */
+  form .button {
+    grid-column: span 2;
+    margin-top: 1rem;
+    justify-self: center;
+  }
+}
+/* *** DESKTOP STYLES *** */
+@media only screen and (min-width: 780px) {
+  /* split into 2 columns */
+  form {
+    grid-template-columns: repeat(2, max-content 1fr);
+  }
+
+  form label {
+    grid-column: auto;
+  }
+
+  form textarea {
+    grid-column: span 3;
+  }
+
+  /* message field will stay take up who line */
+  form .button {
+    grid-column: span 4;
+  }
+}
