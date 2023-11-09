@@ -95,7 +95,7 @@
   border-radius: 1rem;
   padding-bottom: 1rem;
   transition: 0.8s;
-  max-width: 40rem;
+  max-width: 30rem;
 }
 
 /* graphic component: project card image */
@@ -108,53 +108,6 @@
 #home-project section:hover {
   box-shadow: 8.6px 7.1px 19px -11px rgba(0, 0, 0, 0.065),
     36px 30px 45px -11px rgba(0, 0, 0, 0.13);
-}
-
-/* *** home page - blog posts *** */
-
-#home-blog {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  row-gap: 2rem;
-}
-
-/* text component: blog card */
-.home-blog-card {
-  text-decoration: none;
-  color: black;
-  width: 100%;
-  /* prepare for background hover effect */
-  transition: 0.2s;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  /* add max width so that title and date doesnt get too far awar */
-  max-width: 40rem;
-}
-
-.blog-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  row-gap: 1rem;
-  align-items: center;
-}
-
-/* right align published dates */
-.home-blog-card > p {
-  text-align: end;
-}
-
-/* add background color and '>' to indicate the hovered element is a clickable link */
-.home-blog-card:hover {
-  background-color: #add8e670;
-}
-
-.home-blog-card:hover h3::after {
-  content: ">";
-  display: inline-block;
-  margin-left: 1rem;
 }
 
 /* *** TABLET STYLES *** */
